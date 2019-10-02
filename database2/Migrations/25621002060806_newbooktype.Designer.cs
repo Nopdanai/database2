@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using database2.Data;
 
-namespace database2.Data.Migrations
+namespace database2.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("25620923120318_Update2")]
-    partial class Update2
+    [Migration("25621002060806_newbooktype")]
+    partial class newbooktype
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -191,6 +191,8 @@ namespace database2.Data.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Booktype");
 
                     b.Property<string>("Name")
                         .IsRequired();
